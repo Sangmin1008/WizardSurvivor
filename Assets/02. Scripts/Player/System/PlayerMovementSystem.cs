@@ -46,10 +46,4 @@ partial struct PlayerMovementSystem : ISystem
         if (math.abs(transform.ValueRO.Rotation.value.y - yRotation) > 0.01f)
             transform.ValueRW.Rotation = quaternion.RotateY(yRotation);
     }
-
-    [BurstCompile]
-    public void OnDestroy(ref SystemState state)
-    {
-        
-    }
 }
