@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnAuthoring
   EnemyPrefab: {fileID: 7216016393046143495, guid: 762f5dc92893d2e4f9a2068fb03ac88c, type: 3}
-  EnemyCount: 30000
+  EnemyCount: 10000
   MinSpeed: 0.2
   MaxSpeed: 1
   SpawnRadius: 50
@@ -183,11 +183,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7268245563734081111, guid: 0e445362d7e4e8b4ebbd30be44160c7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 7268245563734081111, guid: 0e445362d7e4e8b4ebbd30be44160c7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 7268245563734081111, guid: 0e445362d7e4e8b4ebbd30be44160c7f, type: 3}
       propertyPath: m_LocalPosition.z

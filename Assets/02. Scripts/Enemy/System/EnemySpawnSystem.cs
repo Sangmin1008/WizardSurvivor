@@ -44,9 +44,9 @@ partial struct EnemySpawnSystem : ISystem
                 var position = new float3(
                     math.cos(angle) * distance,
                     math.sin(angle) * distance,
-                    0f);
+                    enemyEntity.Index * 0.00001f);
                 
-                // Enemt에 컴포넌트 데이터 추가
+                // Enemy에 컴포넌트 데이터 추가 (랜덤한 속도 설정)
                 var enemyData = new EnemyComponent
                 {
                     Speed = random.NextFloat(enemySpawnComponent.MaxSpeed, enemySpawnComponent.MaxSpeed)
@@ -56,10 +56,18 @@ partial struct EnemySpawnSystem : ISystem
                 
                 ecb.SetComponent(enemyEntity, LocalTransform.FromPositionRotationScale(
                     position, quaternion.identity, 2.0f));
+                
+                // 애님메이션 오프셋 값 설정
+                var spawnTimeData = new EnemySpawnTime
+                {
+                    Value = random.NextFloat(0f, 10f)
+                };
+                ecb.AddComponent(enemyEntity, spawnTimeData);
             }
-            
-            ecb.Playback(state.EntityManager);
-            ecb.Dispose();
         }
+        
+                    
+        ecb.Playback(state.EntityManager);
+        ecb.Dispose();
     }
 }
