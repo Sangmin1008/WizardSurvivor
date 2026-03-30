@@ -152,7 +152,9 @@ MonoBehaviour:
   EnemyCount: 10000
   MinSpeed: 0.2
   MaxSpeed: 1
+  MinSpawnRadius: 5
   SpawnRadius: 50
+  StoppingDistance: 2
   RandomSeed: 12345
 --- !u!4 &995999744
 Transform:
@@ -183,11 +185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7268245563734081111, guid: 0e445362d7e4e8b4ebbd30be44160c7f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.36
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7268245563734081111, guid: 0e445362d7e4e8b4ebbd30be44160c7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.39
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7268245563734081111, guid: 0e445362d7e4e8b4ebbd30be44160c7f, type: 3}
       propertyPath: m_LocalPosition.z

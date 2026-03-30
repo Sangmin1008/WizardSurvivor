@@ -40,7 +40,7 @@ partial struct EnemySpawnSystem : ISystem
                 
                 // 랜덤 위치 설정
                 var angle = random.NextFloat(0f, math.PI * 2f);
-                var distance = random.NextFloat(10f, enemySpawnComponent.SpawnRadius);
+                var distance = random.NextFloat(enemySpawnComponent.MinSpawnRadius, enemySpawnComponent.SpawnRadius);
                 var position = new float3(
                     math.cos(angle) * distance,
                     math.sin(angle) * distance,
@@ -49,7 +49,8 @@ partial struct EnemySpawnSystem : ISystem
                 // Enemy에 컴포넌트 데이터 추가 (랜덤한 속도 설정)
                 var enemyData = new EnemyComponent
                 {
-                    Speed = random.NextFloat(enemySpawnComponent.MaxSpeed, enemySpawnComponent.MaxSpeed)
+                    Speed = random.NextFloat(enemySpawnComponent.MaxSpeed, enemySpawnComponent.MaxSpeed),
+                    StoppingDistance = enemySpawnComponent.StoppingDistance
                 };
                 
                 ecb.AddComponent(enemyEntity, enemyData);

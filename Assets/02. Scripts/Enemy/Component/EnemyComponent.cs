@@ -4,6 +4,7 @@ using Unity.Rendering;
 public struct EnemyComponent : IComponentData
 {
     public float Speed;
+    public float StoppingDistance;
 }
 
 public struct EnemyTag : IComponentData {}

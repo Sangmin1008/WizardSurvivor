@@ -7,7 +7,9 @@ class EnemySpawnAuthoring : MonoBehaviour
     public int EnemyCount = 30000;
     public float MinSpeed = 0.2f;
     public float MaxSpeed = 1.0f;
+    public float MinSpawnRadius = 10f;
     public float SpawnRadius = 50f;
+    public float StoppingDistance = 2f;
     public uint RandomSeed = 12345;
 }
 
@@ -23,7 +25,9 @@ class EnemySpawnAuthoringBaker : Baker<EnemySpawnAuthoring>
             NumEnemies = authoring.EnemyCount,
             MinSpeed = authoring.MinSpeed,
             MaxSpeed = authoring.MaxSpeed,
+            MinSpawnRadius = authoring.MinSpawnRadius,
             SpawnRadius = authoring.SpawnRadius,
+            StoppingDistance = authoring.StoppingDistance,
             RandomSeed = authoring.RandomSeed,
         });
         

@@ -6,7 +6,9 @@ public struct EnemySpawnComponent : IComponentData
     public int NumEnemies;
     public float MinSpeed;
     public float MaxSpeed;
+    public float MinSpawnRadius;
     public float SpawnRadius;
+    public float StoppingDistance;
     public uint RandomSeed;
 }
 

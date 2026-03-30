@@ -72,6 +72,9 @@ public partial struct EnemyMovementJob : IJobEntity
         // 먼 Enemy의 업데이트 빈도를 (50%) 감소
         float distSq = math.distancesq(transform.Position, PlayerPosition);
         if (distSq > 100f && entity.Index % 2 == 0) return;
+
+        // Player와의 거리를 계산해서 정지거리 이내이면 이동하지 않음
+        if (enemyComponent.StoppingDistance * enemyComponent.StoppingDistance >= distSq) return;
         
         // Player 방향의 벡터를 계산
         var direction = math.normalize(PlayerPosition - transform.Position);
