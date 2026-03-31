@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3765723589563200603}
   - component: {fileID: 2416492886600855277}
   - component: {fileID: 915802443676775257}
+  - component: {fileID: 3827175386881794205}
   m_Layer: 8
   m_Name: HpBar
   m_TagString: Untagged
@@ -90,6 +91,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3827175386881794205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3446394403401688841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c7f6234961f54e4b9f57206c88aeed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHpBarAuthoring
+  FillAmount: 1
 --- !u!1 &4489904892157047921
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +116,8 @@ GameObject:
   - component: {fileID: 1325147662043487302}
   - component: {fileID: 2065721958268314089}
   - component: {fileID: 3123200307735857057}
+  - component: {fileID: 1250168893239131463}
+  - component: {fileID: 230927403255393571}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -197,3 +213,51 @@ MonoBehaviour:
   Speed: 5
   CurrentHp: 100
   MaxHp: 100
+--- !u!54 &1250168893239131463
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4489904892157047921}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 0
+--- !u!65 &230927403255393571
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4489904892157047921}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.58, y: 0.64, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}

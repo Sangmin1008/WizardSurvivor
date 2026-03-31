@@ -3,7 +3,7 @@ using UnityEngine;
 
 class EnemyHpBarAuthoring : MonoBehaviour
 {
-    public float FillAmount;
+    public float FillAmount = 1f;
 }
 
 class EnemyHpBarAuthoringBaker : Baker<EnemyHpBarAuthoring>

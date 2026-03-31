@@ -7,6 +7,7 @@ public struct EnemyComponent : IComponentData
     public float StoppingDistance;
     public float CurrentHp;
     public float MaxHp;
+    public float Damage;
 }
 
 public struct EnemyTag : IComponentData {}

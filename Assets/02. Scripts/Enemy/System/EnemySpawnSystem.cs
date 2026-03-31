@@ -53,6 +53,7 @@ partial struct EnemySpawnSystem : ISystem
                     StoppingDistance = enemySpawnComponent.StoppingDistance,
                     CurrentHp = 100f,
                     MaxHp = 100f,
+                    Damage = 0.1f
                 };
                 
                 ecb.AddComponent(enemyEntity, enemyData);
