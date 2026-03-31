@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 316443357883862748}
   - component: {fileID: 1443783388779262310}
   - component: {fileID: 1248011920472960290}
+  - component: {fileID: 3021801137140020290}
   m_Layer: 7
   m_Name: HpBar
   m_TagString: Untagged
@@ -90,6 +91,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3021801137140020290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320983798493280191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebd63e4b16700a47b8a727d95cdafc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHpBarAuthoring
+  FillAmount: 1
 --- !u!1 &7216016393046143495
 GameObject:
   m_ObjectHideFlags: 0
