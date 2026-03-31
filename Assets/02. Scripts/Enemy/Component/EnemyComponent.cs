@@ -5,6 +5,8 @@ public struct EnemyComponent : IComponentData
 {
     public float Speed;
     public float StoppingDistance;
+    public float CurrentHp;
+    public float MaxHp;
 }
 
 public struct EnemyTag : IComponentData {}

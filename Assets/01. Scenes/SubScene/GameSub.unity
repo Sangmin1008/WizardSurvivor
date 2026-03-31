@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnAuthoring
   EnemyPrefab: {fileID: 7216016393046143495, guid: 762f5dc92893d2e4f9a2068fb03ac88c, type: 3}
-  EnemyCount: 10000
+  EnemyCount: 1000
   MinSpeed: 0.2
   MaxSpeed: 1
   MinSpawnRadius: 5

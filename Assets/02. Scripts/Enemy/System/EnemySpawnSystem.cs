@@ -50,7 +50,9 @@ partial struct EnemySpawnSystem : ISystem
                 var enemyData = new EnemyComponent
                 {
                     Speed = random.NextFloat(enemySpawnComponent.MaxSpeed, enemySpawnComponent.MaxSpeed),
-                    StoppingDistance = enemySpawnComponent.StoppingDistance
+                    StoppingDistance = enemySpawnComponent.StoppingDistance,
+                    CurrentHp = 100f,
+                    MaxHp = 100f,
                 };
                 
                 ecb.AddComponent(enemyEntity, enemyData);
