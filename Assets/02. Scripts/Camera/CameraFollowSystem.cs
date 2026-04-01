@@ -36,7 +36,7 @@ partial class CameraFollowSystem : SystemBase
         if (_mainCamera == null) return;
         
         // Player 엔티티 캐싱
-        if (_playerEntity == Entity.Null)
+        if (_playerEntity == Entity.Null || !SystemAPI.Exists(_playerEntity))
         {
             _playerEntity = SystemAPI.GetSingletonEntity<PlayerTag>();
         }

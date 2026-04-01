@@ -40,7 +40,16 @@ public class PlayerInputManager : MonoBehaviour
         // 컴포넌트 추가
         // _entityManager.AddComponentData(_playerInputEntity, new PlayerInputComponent());
         
-        _playerInputEntity = _entityManager.CreateEntity(typeof(PlayerInputComponent));
+        var query = _entityManager.CreateEntityQuery(typeof(PlayerInputComponent));
+        if (!query.IsEmpty)
+        {
+            _playerInputEntity = query.GetSingletonEntity();
+        }
+        else
+        {
+            _playerInputEntity = _entityManager.CreateEntity(typeof(PlayerInputComponent));
+        }
+        query.Dispose();
     }
 
     private void OnEnable()
@@ -53,6 +62,7 @@ public class PlayerInputManager : MonoBehaviour
     {
         _moveAction.performed -= OnMove;
         _moveAction.canceled -= OnMove;
+        _moveAction.Dispose();
     }
 
     private void OnMove(InputAction.CallbackContext ctx)
