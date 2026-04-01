@@ -99,6 +99,10 @@ partial struct PlayerDamageSystem : ISystem
                 
                 //Player Entity 삭제
                 ECB.DestroyEntity(PlayerEntity.Index, PlayerEntity);
+                
+                // GameOverTag Entity 생성
+                Entity gameOverEntity = ECB.CreateEntity(0);
+                ECB.AddComponent<GameOverTag>(0, gameOverEntity);
             }
             else
             {
@@ -107,3 +111,5 @@ partial struct PlayerDamageSystem : ISystem
         }
     }
 }
+
+public struct GameOverTag : IComponentData {}
